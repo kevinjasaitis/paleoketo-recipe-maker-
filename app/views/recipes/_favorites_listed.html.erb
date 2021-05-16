@@ -1,0 +1,5 @@
+<ul>  
+  <% favorites.each do |popular|%>
+  <%= render 'recipes/list_recipes', recipe: popular.recipe %>
+  <% end %>
+</ul>

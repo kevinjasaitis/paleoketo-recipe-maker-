@@ -1,0 +1,11 @@
+<h1>Signup!</h1>
+
+<%= form_for @user do |f| %>
+  <%= render 'layouts/form_errors', form: @user %>
+  <%= render 'form', f: f %>
+  <div>Password Confirmation:</div> <div><%= f.password_field :password_confirmation %></div>
+  <%= f.submit "Submit" %>
+
+<% end %>
+
+<%= link_to "Sign in with Google", "/auth/google_oauth2", id: "sign_in" %>
